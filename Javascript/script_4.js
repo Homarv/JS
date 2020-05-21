@@ -1,0 +1,60 @@
+const entrepreneurs = [
+    { first: 'Steve', last: 'Jobs', year: 1955 },
+    { first: 'Oprah', last: 'Winfrey', year: 1954 },
+    { first: 'Bill', last: 'Gates', year: 1955 },
+    { first: 'Sheryl', last: 'Sandberg', year: 1969 },
+    { first: 'Mark', last: 'Zuckerberg', year: 1984 },
+    { first: 'Beyonce', last: 'Knowles', year: 1981 },
+    { first: 'Jeff', last: 'Bezos', year: 1964 },
+    { first: 'Diane', last: 'Hendricks', year: 1947 },
+    { first: 'Elon', last: 'Musk', year: 1971 },
+    { first: 'Marissa', last: 'Mayer', year: 1975 },
+    { first: 'Walt', last: 'Disney', year: 1901 },
+    { first: 'Larry', last: 'Page', year: 1973 },
+    { first: 'Jack', last: 'Dorsey', year: 1976 },
+    { first: 'Evan', last: 'Spiegel', year: 1990 },
+    { first: 'Brian', last: 'Chesky', year: 1981 },
+    { first: 'Travis', last: 'Kalanick', year: 1976 },
+    { first: 'Marc', last: 'Andreessen', year: 1971 },
+    { first: 'Peter', last: 'Thiel', year: 1967 }
+  ];
+
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+console.log("**********Voici les entrepreneur né dans les années 70:")
+entrepreneurs.forEach(x => {
+    if (x.year >=1970 &&  x.year<= 1980){
+    console.log(x)
+    }
+  });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+let tableau=[]
+console.log("**********Voici un array des entrepreneurs")
+entrepreneurs.forEach(x => {
+   
+    tableau.push(`${x.first}  ${x.last}`);
+
+});
+console.log(tableau)
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+console.log("**********Voici l'âge des entrepreneurs")
+entrepreneurs.forEach(x => {
+    console.log( x.first , x.last, 2020-x.year,"ans") 
+});
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+console.log("**********Voici les entrepreneurs dans l'ordre alphabétique")
+
+console.log(entrepreneurs.sort(tri))
+
+function tri(a,b)
+{
+	if (a.last < b.last) return -1;
+	else if (a.last == b.last) return 0;
+	else return 1;
+}
